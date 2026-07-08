@@ -275,3 +275,90 @@ text-align:center;
     margin-bottom:0;
 
 }
+
+.checkout{
+
+max-width:700px;
+
+margin:50px auto;
+
+background:white;
+
+padding:40px;
+
+border-radius:20px;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+
+}
+
+
+.checkout h1{
+
+text-align:center;
+
+margin-bottom:30px;
+
+}
+
+
+.delivery{
+
+display:block;
+
+background:#ffffff;
+
+padding:25px;
+
+margin:20px 0;
+
+border:2px solid #ddd;
+
+border-radius:15px;
+
+cursor:pointer;
+
+}
+
+
+.delivery:hover{
+
+border-color:#22c55e;
+
+}
+
+
+.delivery input{
+
+margin-right:15px;
+
+}
+
+
+.selected{
+
+border:3px solid #22c55e;
+
+background:#f0fdf4;
+
+}
+
+
+.delivery h3{
+
+color:#16a34a;
+
+font-size:25px;
+
+}
+
+
+iframe{
+
+width:100%;
+
+border:none;
+
+margin-top:30px;
+
+}
