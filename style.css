@@ -236,3 +236,29 @@ padding:20px;
 text-align:center;
 
 }
+
+.consent{
+    max-width:800px;
+    margin:50px auto;
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+.consent h1{
+    margin-bottom:20px;
+}
+
+.consent p{
+    line-height:1.6;
+    margin-bottom:15px;
+}
+
+.consent ul{
+    margin-bottom:25px;
+}
+
+.consent li{
+    margin-bottom:10px;
+}
