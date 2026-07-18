@@ -1,10 +1,21 @@
+<!DOCTYPE html>
+<html>
+
 <head>
 
 <link rel="stylesheet" href="style.css">
 
 </head>
 
+
+<body>
+
+
+<div class="checkout">
+
+
 <h1>Choose Delivery</h1>
+
 
 <label class="delivery selected">
 
@@ -29,6 +40,7 @@ Reduced environmental impact
 </label>
 
 
+
 <label class="delivery">
 
 <input
@@ -50,17 +62,106 @@ Fastest available shipping option
 
 </label>
 
-<h2>
-Participant Questionnaire
-</h2>
 
 
-<a class="btn"
-href="https://docs.google.com/forms/d/e/1FAIpQLSfvP-Z3ryHhVfKMl-Xt5khNhqBnauXqQYsHmhsUIPKe4YQQog/viewform?usp=pp_url&entry.118926579=Sustainable+Delivery">
+<!-- Hidden experiment information -->
+
+<input 
+type="hidden"
+id="product"
+value="Eco Hoodie">
+
+
+<input 
+type="hidden"
+id="condition"
+value="Checkout_1">
+
+
+
+<button 
+class="btn"
+onclick="saveData()">
 
 Continue
 
-</a>
+</button>
 
 
 </div>
+
+
+
+<script>
+
+function saveData(){
+
+
+let delivery =
+document.querySelector(
+'input[name="delivery"]:checked'
+).value;
+
+
+
+let data = {
+
+
+participantID:
+"P" + Math.floor(Math.random()*90000+10000),
+
+
+product:
+document.getElementById("product").value,
+
+
+deliveryChoice:
+delivery,
+
+
+condition:
+document.getElementById("condition").value
+
+
+};
+
+
+
+fetch(
+
+"https://script.google.com/macros/s/AKfycbzV-4jTZq0XqO_N4DKLHoWi33HK4Q2ZUSbCHUgsi0UuuM_rfYD8NyOqTICHV0SRnMkh/exec",
+
+{
+
+method:"POST",
+
+mode:"no-cors",
+
+body:JSON.stringify(data)
+
+}
+
+);
+
+
+
+setTimeout(function(){
+
+
+window.location.href =
+"https://docs.google.com/forms/d/e/1FAIpQLSfvP-Z3ryHhVfKMl-Xt5khNhqBnauXqQYsHmhsUIPKe4YQQog/viewform";
+
+
+},1000);
+
+
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
